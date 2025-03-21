@@ -1,0 +1,192 @@
+/* Contenedor principal */
+.container {
+  display: flex;
+  justify-content: center;
+  padding: 100px 20px 20px 20px;
+  width: 100%;
+}
+
+/* Grid Principal (Acordeón + Imagen estática) */
+.mainGrid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 20px;
+  max-width: 1200px;
+  width: 100%;
+}
+
+/* Contenedor del Acordeón y Resumen */
+.timelineContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Acordeón */
+.accordion {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.accordionItem {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.accordionHeader {
+  width: 100%;
+  padding: 15px;
+  background-color: #4CAF50;
+  color: white;
+  text-align: left;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  border: none;
+  transition: background 0.3s ease;
+}
+
+.accordionHeader:hover {
+  background-color: #45a049;
+}
+
+.accordionContent {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 20px;
+  padding: 15px;
+  background-color: #f9f9f9;
+}
+
+.accordionText {
+  font-size: 14px;
+  color: #333;
+}
+
+.accordionServices {
+  background-color: #e8f5e9;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.accordionServices h4 {
+  margin: 0 0 10px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.accordionServices ul {
+  list-style: none;
+  padding: 0;
+}
+
+.accordionServices li {
+  font-size: 14px;
+  padding: 5px 0;
+  border-bottom: 1px solid #ccc;
+}
+
+.accordionServices li:last-child {
+  border-bottom: none;
+}
+
+/* Resumen del itinerario */
+.resumen {
+  background-color: #fff3cd;
+  padding: 15px;
+  border-radius: 5px;
+}
+
+.resumen h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  position: relative;
+}
+
+.timelineItem {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.timelineDot {
+  width: 10px;
+  height: 10px;
+  background-color: #ff9800;
+  border-radius: 50%;
+}
+
+/* Segundo Grid: Imagen + Información estática */
+.imageServicesContainer {
+  position: sticky;
+  top: 100px;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.imageContainer {
+  text-align: center;
+}
+
+.image {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.imageToggle {
+  margin-top: 10px;
+  padding: 8px 12px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.imageToggle:hover {
+  background-color: #0056b3;
+}
+
+/* Información estática */
+.servicesText {
+  background-color: #e3f2fd;
+  padding: 15px;
+  border-radius: 5px;
+}
+
+.servicesText h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.servicesText p {
+  font-size: 14px;
+  color: #333;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .mainGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .accordionContent {
+    grid-template-columns: 1fr;
+  }
+
+  .imageServicesContainer {
+    position: static;
+  }
+}

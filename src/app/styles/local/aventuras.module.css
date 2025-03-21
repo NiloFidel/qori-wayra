@@ -1,0 +1,90 @@
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+  }
+  
+  .slider {
+    position: relative;
+    margin-bottom: 3rem;
+    background: #fff;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+  }
+  
+  .slideHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+    padding: 0 1rem;
+  }
+  
+  .slideHeader h2 {
+    font-size: 1.8rem;
+    margin: 0;
+    color: #333;
+  }
+  
+  .arrowButtons {
+    display: flex;
+    gap: 0.5rem;
+  }
+  
+  .arrowButton {
+    background: none;
+    border: none;
+    font-size: 1.8rem;
+    cursor: pointer;
+    color: #333;
+    padding: 0.2rem;
+    transition: color 0.3s;
+  }
+  
+  .arrowButton:hover {
+    color: #0070f3;
+  }
+  
+  .slideContent {
+    display: flex;
+    justify-content: space-between;
+    transition: all 0.5s ease;
+  }
+  
+  .card {
+    flex: 1;
+    margin: 0 0.5rem;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    padding: 1rem;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .cardImage {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+  }
+  
+  .cardText {
+    margin-top: 1rem;
+    font-style: italic;
+    font-size: 1rem;
+    color: #333;
+  }
+  
+  @media (max-width: 1024px) {
+    .slideContent {
+      flex-direction: column;
+      align-items: center;
+    }
+    
+    .card {
+      width: 80%;
+      margin-bottom: 1rem;
+    }
+  }
+  

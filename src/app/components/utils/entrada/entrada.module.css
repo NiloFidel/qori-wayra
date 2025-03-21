@@ -1,0 +1,168 @@
+/* 🎨 CONTENEDOR PRINCIPAL */
+.entradaContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 100px 20px 20px 20px;
+}
+
+/* 🏷️ TÍTULO PRINCIPAL */
+.entradaContainer h1 {
+  margin: 0;
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+  text-transform: uppercase;
+  color: #333;
+}
+
+/* 📷 SECCIÓN SUPERIOR: MOSAICO DE IMÁGENES */
+.topImages {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Izquierda: mapa | Derecha: imágenes */
+  gap: 0.8rem;
+  align-items: stretch;
+}
+
+/* 🌍 MAPA */
+.mapContainer {
+  width: 100%;
+  height: 100%;
+}
+
+.mapImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* 🖼️ GRID DE IMÁGENES PEQUEÑAS */
+.rightGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 0.8rem;
+  width: 100%;
+  height: 100%;
+}
+
+.smallImageWrapper {
+  width: 100%;
+  height: 100%;
+}
+
+.smallImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* ⭐ SECCIÓN DE CARACTERÍSTICAS (FEATURES) */
+.featuresContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  background-color: #f8f9fa;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* 🎯 TARJETA DE CADA FEATURE */
+.feature {
+  flex: 1;
+  text-align: center;
+  padding: 1.5rem;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  background: #fff;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* 🌟 ICONO DE CADA FEATURE */
+.featureIcon {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  color: #0070f3;
+}
+
+/* 🔹 TÍTULO DE FEATURE */
+.feature h3 {
+  font-size: 1.4rem;
+  margin: 0 0 0.5rem;
+  color: #333;
+  font-weight: 600;
+}
+
+/* 📖 DESCRIPCIÓN DE FEATURE */
+.feature p {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* 📱 RESPONSIVE DESIGN */
+@media (max-width: 1024px) {
+  .topImages {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+  }
+
+  .rightGrid {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto auto;
+  }
+
+  .featuresContainer {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .feature {
+    width: 100%;
+    max-width: 400px;
+  }
+}
+
+@media (max-width: 768px) {
+  .entradaContainer {
+    padding: 80px 15px 15px;
+  }
+
+  .entradaContainer h1 {
+    font-size: 1.8rem;
+  }
+
+  .featuresContainer {
+    padding: 1rem;
+  }
+
+  .feature {
+    padding: 1rem;
+  }
+
+  .featureIcon {
+    font-size: 2rem;
+  }
+
+  .feature h3 {
+    font-size: 1.2rem;
+  }
+
+  .feature p {
+    font-size: 0.95rem;
+  }
+}
