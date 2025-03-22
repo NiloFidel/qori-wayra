@@ -1,20 +1,24 @@
-import { NextResponse } from "next/server";
-import type { NextRequest } from "next/server";
-import { locales, defaultLocale } from "./src/app/lib/i18n";
+import { NextRequest, NextResponse } from "next/server";
 
-export function middleware(request: NextRequest) {
-  const { pathname } = request.nextUrl;
-  
-  // Si la URL ya tiene un locale válido, no hacer nada
-  const pathnameHasLocale = locales.some((locale) =>
-    pathname.startsWith(`/${locale}`)
-  );
-  if (pathnameHasLocale) return NextResponse.next();
+// Define los idiomas soportados
+const locales = ["en", "es"];
 
-  // Redirigir al idioma por defecto
-  return NextResponse.redirect(new URL(`/${defaultLocale}${pathname}`, request.url));
+export function middleware(req: NextRequest) {
+  // Obtiene el pathname (ruta) sin el dominio
+  const { pathname } = req.nextUrl;
+
+  // Si ya tiene un idioma en la URL, lo dejamos pasar
+  const hasLocale = locales.some((locale) => pathname.startsWith(`/${locale}/`));
+  if (hasLocale || pathname === "/") {
+    return NextResponse.next();
+  }
+
+  // Redireccionamos al idioma por defecto "en"
+  const locale = "en";
+  return NextResponse.redirect(new URL(`/${locale}${pathname}`, req.url));
 }
 
+// Configurar las rutas donde se aplica el middleware
 export const config = {
-  matcher: ["/((?!api|_next|.*\\..*).*)"],
+  matcher: "/((?!_next|favicon.ico|public|api).*)",
 };

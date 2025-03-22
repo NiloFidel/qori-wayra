@@ -2,6 +2,7 @@
 
 import React, { useState, useRef, useEffect } from "react";
 import styles from "./principal.module.css";
+import Image from "next/image";
 import {
   FaWhatsapp,
   FaClock,
@@ -231,8 +232,11 @@ export default function ComponentePrincipal({
           <div className={styles.imageGrid}>
             {/* Mapa */}
             <div className={styles.mapImageWrapper}>
-              <img
+              <Image
                 src={mapImage}
+                width={1000}
+                height={1000}
+                quality={100}
                 alt="Mapa del tour"
                 className={styles.mapImage}
               />
@@ -240,7 +244,7 @@ export default function ComponentePrincipal({
             {/* Otras imágenes */}
             {smallImages.map((src, index) => (
               <div key={index} className={styles[`imagePosition${index + 1}`]}>
-                <img src={src} alt={`Imagen ${index + 1}`} />
+                <Image src={src} width={1000} height={1000} quality={100} alt={`Imagen ${index + 1}`} />
               </div>
             ))}
           </div>

@@ -232,8 +232,9 @@ export default function LandingPage() {
               <Image
                 src={imgMission}
                 alt="Misión"
-                width={300}
-                height={200}
+                width={1000}
+                height={1000}
+                quality={100}
                 className={styles.image}
               />
               {showMission ? (
@@ -255,8 +256,9 @@ export default function LandingPage() {
               <Image
                 src={imgVision}
                 alt="Visión"
-                width={300}
-                height={200}
+                width={1000}
+                height={1000}
+                quality={100}
                 className={styles.image}
               />
               {showVision ? (
@@ -280,6 +282,9 @@ export default function LandingPage() {
             <Image
               src={t.slider.slides[currentSlide].src}
               alt={`Slide ${currentSlide + 1}`}
+              width={1000}
+              height={1000}
+              quality={100}
               className={styles.slideImage}
             />
             <p className={styles.slideDescription}>

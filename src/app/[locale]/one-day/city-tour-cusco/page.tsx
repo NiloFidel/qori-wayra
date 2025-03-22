@@ -133,7 +133,7 @@ const translations: { es: TranslationContent; en: TranslationContent } = {
         title: "Day 1: Cusco City Tour",
         text: (
           <>
-            <p>Your day begins with transport from your hotel to Cusco's historic center. Start with a visit to Qoricancha, the Inca temple of the sun, followed by a tour of the impressive Cathedral and the vibrant Plaza de Armas.</p>
+            <p>Your day begins with transport from your hotel to Cuscos historic center. Start with a visit to Qoricancha, the Inca temple of the sun, followed by a tour of the impressive Cathedral and the vibrant Plaza de Armas.</p>
             <p>Next, explore Sacsayhuamán, an Incan fortress offering panoramic views of the city, and conclude with a visit to the traditional San Pedro Market, where you can experience authentic Cusco life.</p>
           </>
         ),

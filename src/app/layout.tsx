@@ -3,22 +3,27 @@
 import Navbar from "./components/base/navbar/navbar";
 import Footer from "./components/base/footer/footer";
 import Whapa from "./components/utils/contact/contact"
-import { useParams } from "next/navigation";
+import { ReactNode } from "react";
 import "@/app/globals.css";
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
-  const { locale } = useParams();
-  // Forzamos que currentLocale sea "en" solo si locale es "en", de lo contrario "es"
-  const currentLocale = locale === "en" ? "en" : "es";
-
+interface LayoutProps {
+  children: ReactNode;
+}
+export default function RootLayout({ children }: LayoutProps) {
   return (
-    <html lang={currentLocale}>
+    <html lang="es">
       <body>
-        <Navbar locale={currentLocale} />
+        <Navbar locale="es" />
         <main>{children}</main>
         <Whapa />
-        <Footer locale={currentLocale} />
+        <Footer locale="es" />
       </body>
     </html>
   );
 }
+
+
+
+
+
+

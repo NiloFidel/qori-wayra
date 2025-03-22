@@ -3,6 +3,7 @@ import styles from "./navbar.module.css";
 import Link from "next/link";
 import { translations } from "../../../lib/i18n";
 import LanguageSwitcher from "../switch/languajeSwitcher";
+import Image from "next/image";
 
 export default function Navbar({ locale }: { locale: string }) {
   const t = translations[locale as keyof typeof translations] || translations.es;
@@ -51,9 +52,12 @@ export default function Navbar({ locale }: { locale: string }) {
               setMobileMenuOpen(false);
             }}
           >
-            <img
+            <Image
               src="https://guru-almacen.s3.us-east-1.amazonaws.com/quechua/logo-qori-wayra.png"
               alt="Logo Qori Wayra"
+              width={1000}
+              height={1000}
+              quality={100}
               className={styles.logo}
             />
           </Link>

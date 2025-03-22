@@ -248,7 +248,7 @@ const translations: { es: TranslationContent; en: TranslationContent } = {
         text: (
           <>
             <p>
-              Begin your descent from Salkantay Pass through lush, high jungle terrain. Arrive in Aguas Calientes, where you'll check in to your hotel.
+              Begin your descent from Salkantay Pass through lush, high jungle terrain. Arrive in Aguas Calientes, where you will check in to your hotel.
             </p>
             <p>
               Enjoy some free time to rest and prepare for your Machu Picchu visit.

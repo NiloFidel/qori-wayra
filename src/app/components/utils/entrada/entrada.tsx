@@ -3,6 +3,7 @@
 import React from "react";
 import styles from "./entrada.module.css";
 import { FaDollarSign, FaHeadset, FaUsers } from "react-icons/fa";
+import Image from "next/image";
 
 interface Feature {
   title: string;
@@ -39,13 +40,13 @@ export default function Entrada({
       <div className={styles.topImages}>
         {/* Columna izquierda: Mapa */}
         <div className={styles.mapContainer}>
-          <img src={mapImage} alt="Mapa" className={styles.mapImage} />
+          <Image src={mapImage} width={1000} height={1000} quality={100} alt="Mapa" className={styles.mapImage} />
         </div>
         {/* Columna derecha: Grid de 4 imágenes */}
         <div className={styles.rightGrid}>
           {smallImages.map((src, index) => (
             <div key={index} className={styles.smallImageWrapper}>
-              <img src={src} alt={`Foto ${index + 1}`} className={styles.smallImage} />
+              <Image src={src} width={1000} height={1000} quality={100} alt={`Foto ${index + 1}`} className={styles.smallImage} />
             </div>
           ))}
         </div>

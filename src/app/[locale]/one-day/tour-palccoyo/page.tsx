@@ -145,7 +145,7 @@ const translations: { es: TranslationContent; en: TranslationContent } = {
         title: "One Day Tour: Cusco - Palccoyo - Cusco",
         text: (
           <>
-            <p>Your day begins with a hotel pickup in Cusco. Enjoy a comfortable ride to Palccoyo, where you'll be greeted by a natural landscape bursting with vibrant colors and stunning geological formations.</p>
+            <p>Your day begins with a hotel pickup in Cusco. Enjoy a comfortable ride to Palccoyo, where you will be greeted by a natural landscape bursting with vibrant colors and stunning geological formations.</p>
             <p>Join a guided hike along Andean trails, learn about the minerals that create these vivid hues, and take plenty of photos. Finally, return to Cusco with unforgettable memories.</p>
           </>
         ),
@@ -169,7 +169,7 @@ const translations: { es: TranslationContent; en: TranslationContent } = {
     recommendations: [
       "Wear comfortable clothing and trekking shoes",
       "Bring sunscreen, water, and snacks",
-      "Don't forget your camera",
+      "Do not forget your camera",
     ],
     groupServices: {
       daysAndNights: "1D",

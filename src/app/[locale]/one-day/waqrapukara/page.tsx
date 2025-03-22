@@ -131,7 +131,7 @@ const translations: { es: TranslationContent; en: TranslationContent } = {
         title: "Tour Itinerary",
         text: (
           <>
-            <p>The tour starts with a pickup in Cusco and a transfer to Waqrapukara. Once there, an expert guide will take you through the ruins and the stunning panoramic views of the valley. You'll have time to take photos and uncover the secrets of this Inca fortress.</p>
+            <p>The tour starts with a pickup in Cusco and a transfer to Waqrapukara. Once there, an expert guide will take you through the ruins and the stunning panoramic views of the valley. You will have time to take photos and uncover the secrets of this Inca fortress.</p>
             <p>After the tour, you will return to Cusco with unforgettable memories.</p>
           </>
         ),

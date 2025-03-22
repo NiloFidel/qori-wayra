@@ -143,8 +143,8 @@ const translations: { es: TranslationContent; en: TranslationContent } = {
         title: "Full Day Itinerary",
         text: (
           <>
-            <p>The tour begins early in Cusco with a pickup that takes you to the trailhead. Along the way, you'll enjoy unique Andean landscapes.</p>
-            <p>The trek leads you through scenic trails until you reach the magnificent Laguna Humantay, known for its turquoise waters and stunning mountainous backdrop. After spending time taking in the views and photos, you'll head back to Cusco.</p>
+            <p>The tour begins early in Cusco with a pickup that takes you to the trailhead. Along the way, you will enjoy unique Andean landscapes.</p>
+            <p>The trek leads you through scenic trails until you reach the magnificent Laguna Humantay, known for its turquoise waters and stunning mountainous backdrop. After spending time taking in the views and photos, you will head back to Cusco.</p>
           </>
         ),
         services: [
